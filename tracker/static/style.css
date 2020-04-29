@@ -1,5 +1,5 @@
 
- .main-block{
+ .main-block-1{
  display: flex;
  flex-wrap:wrap;
  flex-direction: column;
@@ -10,23 +10,6 @@
   padding: 20px 0;
   margin: 0 0;
 }
-.input-block{
-  background: lightblue;
-}
-.input-label,.input-field{
-  margin:5px 5px;
-  display:inline;
-  padding:5px 5px;
-  text-align: center;
-}
-.submit-button{
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  margin: 5px 5px;
-  padding: 5px 5px;
-   transition-duration: 0.4s;
-}
 .submit-button:hover {
   background-color: white;
   color: black;
@@ -36,46 +19,47 @@
    background: palegreen;
    padding: 20px 0;
    margin: 0 0;
+   font-size: 25px;
  }
- .box1,.box2,.box3{
-   font-size: 20px;
+ .box1,.box2,.box3,.box4{
+   font-size: 25px;
    border-radius: 5px;
    margin-bottom: 50px;
  }
- .world-block,.country-total-block,.country-today-block{
+ .world-block,.country-total-block,.country-yesterday-block,.country-today-block{
  display:flex;
  flex-wrap:wrap;
  justify-content:space-around;
  margin:20px 50px;
  }
- .wb1,.ctotalb1,.ctodayb1{
+ .wb1,.ctotalb1,.cyesterdayb1,.ctodayb1{
  color:white;
- font-size: 20px;
+ font-size: 30px;
  padding:5px 5px;
  width:250px;
  margin: 0 auto;
  box-shadow: 5px 5px 5px grey;
  transition: transform .2s;
  }
- .wb2,.ctotalb2,.ctodayb2{
+ .wb2,.ctotalb2,.cyesterdayb2,.ctodayb2{
  color:white;
- font-size: 20px;
+ font-size: 30px;
  padding:5px 5px;
  width:250px;
  margin: 0 auto;
  box-shadow: 5px 5px 5px grey;
  transition: transform .2s;
  }
- .wb3,.ctotalb3,.ctodayb3{
+ .wb3,.ctotalb3,.cyesterdayb3,.ctodayb3{
  color:white;
- font-size: 20px;
+ font-size: 30px;
  padding:5px 5px;
  width:250px;
  margin: 0 auto;
  box-shadow: 5px 5px 5px grey;
  transition: transform .2s;
  }
- .wb1:hover,.ctotalb1:hover,.ctodayb1:hover,.wb2:hover,.ctotalb2:hover,.ctodayb2:hover,.wb3:hover,.ctotalb3:hover,.ctodayb3:hover {
+ .wb1:hover,.ctotalb1:hover,.cyesterdayb1:hover,.ctodayb1:hover,.wb2:hover,.ctotalb2:hover,.cyesterdayb2:hover,.ctodayb2:hover,.wb3:hover,.ctotalb3:hover,.cyesterdayb3:hover,.ctodayb3:hover {
   transform: scale(1.3);
 }
  .wb1{
@@ -84,8 +68,11 @@
  .ctotalb1{
    background-color: #00ace6;
  }
- .ctodayb1{
+ .cyesterdayb1{
    background-color: #00bfff;
+ }
+ .ctodayb1{
+   background-color: #008B8B;
  }
 
  .wb2{
@@ -94,8 +81,11 @@
  .ctotalb2{
    background-color: #ff1a1a;
  }
- .ctodayb2{
+ .cyesterdayb2{
    background-color: #ff3333;
+ }
+ .ctodayb2{
+   background-color: DarkRed;
  }
 
  .wb3{
@@ -104,6 +94,9 @@
  .ctotalb3{
    background-color: #228B22;
  }
- .ctodayb3{
+ .cyesterdayb3{
    background-color:#008000;
+ }
+ .ctodayb3{
+   background-color:#2E8B57;
  }

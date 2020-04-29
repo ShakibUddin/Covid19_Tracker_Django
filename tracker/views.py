@@ -45,7 +45,7 @@ def index(request):
 
     #country todays data
     url = "https://covid-19-data.p.rapidapi.com/report/country/name"
-    before_today_date = str(datetime.date.today() - datetime.timedelta(2))
+    before_today_date = str(datetime.date.today() - datetime.timedelta(1))
     querystring = {"date-format": "YYYY-MM-DD", "format": "json", "date": before_today_date, "name": country}
 
     headers = {
@@ -61,6 +61,23 @@ def index(request):
     country_total_recovered_previousday = country_data[0]['provinces'][0]['recovered']
     country_total_death_previousday = country_data[0]['provinces'][0]['deaths']
 
+    #country yesterday
+    url = "https://covid-19-data.p.rapidapi.com/report/country/name"
+    day_before_previous_day = str(datetime.date.today() - datetime.timedelta(2))
+
+    querystring = {"date-format": "YYYY-MM-DD", "format": "json", "date": day_before_previous_day, "name": country}
+
+    headers = {
+        'x-rapidapi-host': "covid-19-data.p.rapidapi.com",
+        'x-rapidapi-key': "7be87834c4msh50d6f6176b86285p18e58ajsnef3f9a5da09a"
+    }
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    country_data = json.loads(response.text)
+    locale.setlocale(locale.LC_ALL, '')
+
+    country_total_confirmed_before_previousday = country_data[0]['provinces'][0]['confirmed']
+    country_total_recovered_before_previousday = country_data[0]['provinces'][0]['recovered']
+    country_total_death_before_previousday = country_data[0]['provinces'][0]['deaths']
 
     all_data ={
         'country':country,
@@ -79,7 +96,12 @@ def index(request):
             'confirmed':(country_total_confirmed-country_total_confirmed_previousday),
             'deaths':(country_total_death-country_total_death_previousday),
             'recovered':(country_total_recovered-country_total_recovered_previousday),
-        }
+        },
+        'bd_yesterday':{
+            'confirmed':(country_total_confirmed_previousday-country_total_confirmed_before_previousday),
+            'deaths':(country_total_death_previousday-country_total_death_before_previousday),
+            'recovered':(country_total_recovered_previousday-country_total_recovered_before_previousday),
+        },
     }
 
     return render(request,"tracker/index.html",all_data)

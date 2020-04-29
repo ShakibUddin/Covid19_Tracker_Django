@@ -7,13 +7,13 @@
     <title>Covid-19 Tracker</title>
 </head>
 <body>
-  <div class="main-block">
+  <div class="main-block-1">
     <div class="title-box">
       <h1 class="main-title">Bangladesh Covid-19 Tracker</h1>
       <h3 class="date">Today is {{ date }}</h3>
     </div>
     <div class="box1">
-      <h2 class="title">World</h2>
+      <h2 class="title">World Total</h2>
       <div class="world-block">
         <div class="wb1">
           <h4 class="wb1t1">Confirmed</h4>
@@ -47,6 +47,23 @@
       </div>
      </div>
     <div class="box3">
+      <h2 class="title">{{country}} Yesterday</h2>
+      <div class="country-yesterday-block">
+        <div class="cyesterdayb1">
+          <h4 class="cyesterdayb1t1">Confirmed</h4>
+          <h4 class="cyesterdayb1t1">{{ bd_yesterday.confirmed|intcomma }}</h4>
+        </div>
+        <div class="cyesterdayb2">
+          <h4 class="cyesterdayb2t2">Death</h4>
+          <h4 class="cyesterdayb2t2">{{ bd_yesterday.deaths|intcomma }}</h4>
+        </div>
+        <div class="cyesterdayb3">
+          <h4 class="cyesterdayb3t3">Recovered</h4>
+          <h4 class="cyesterdayb3t3">{{ bd_yesterday.recovered|intcomma }}</h4>
+        </div>
+      </div>
+    </div>
+    <div class="box4">
       <h2 class="title">{{country}} Today</h2>
       <div class="country-today-block">
         <div class="ctodayb1">
