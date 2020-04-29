@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="766655ec-7ec7-4871-85a6-97b145eec329" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/covid19_tracker.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/static/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/templates/tracker/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/templates/tracker/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="766655ec-7ec7-4871-85a6-97b145eec329" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +23,17 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="covid19_tracker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="covid19_tracker" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -63,6 +63,14 @@
       <option name="presentableId" value="Default" />
       <updated>1588122157771</updated>
     </task>
+    <task id="LOCAL-00001" summary="&quot;04/29/2020&quot;">
+      <created>1588125112797</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588125112797</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -86,5 +94,9 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;04/29/2020&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;04/29/2020&quot;" />
   </component>
 </project>
