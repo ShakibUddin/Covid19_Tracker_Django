@@ -1,0 +1,87 @@
+
+ .main-block{
+ display: flex;
+ flex-wrap:wrap;
+ flex-direction: column;
+ text-align:center;
+ }
+.main-title{
+  background: MediumSpringGreen;
+  padding: 20px 0;
+  margin: 0 0;
+}
+ .date{
+   background: palegreen;
+   padding: 20px 0;
+   margin: 0 0;
+ }
+ .box1,.box2,.box3{
+   font-size: 20px;
+   border-radius: 5px;
+   margin-bottom: 50px;
+ }
+ .world-block,.country-total-block,.country-today-block{
+ display:flex;
+ flex-wrap:wrap;
+ justify-content:space-around;
+ margin:20px 50px;
+ }
+ .wb1,.ctotalb1,.ctodayb1{
+ color:white;
+ font-size: 20px;
+ padding:5px 5px;
+ width:250px;
+ margin: 0 auto;
+ box-shadow: 5px 5px 5px grey;
+ transition: transform .2s;
+ }
+ .wb2,.ctotalb2,.ctodayb2{
+ color:white;
+ font-size: 20px;
+ padding:5px 5px;
+ width:250px;
+ margin: 0 auto;
+ box-shadow: 5px 5px 5px grey;
+ transition: transform .2s;
+ }
+ .wb3,.ctotalb3,.ctodayb3{
+ color:white;
+ font-size: 20px;
+ padding:5px 5px;
+ width:250px;
+ margin: 0 auto;
+ box-shadow: 5px 5px 5px grey;
+ transition: transform .2s;
+ }
+ .wb1:hover,.ctotalb1:hover,.ctodayb1:hover,.wb2:hover,.ctotalb2:hover,.ctodayb2:hover,.wb3:hover,.ctotalb3:hover,.ctodayb3:hover {
+  transform: scale(1.3);
+}
+ .wb1{
+   background-color: #0099cc;
+ }
+ .ctotalb1{
+   background-color: #00ace6;
+ }
+ .ctodayb1{
+   background-color: #00bfff;
+ }
+
+ .wb2{
+   background-color: #ff0000;
+ }
+ .ctotalb2{
+   background-color: #ff1a1a;
+ }
+ .ctodayb2{
+   background-color: #ff3333;
+ }
+
+ .wb3{
+   background-color: #00b300;
+ }
+ .ctotalb3{
+   background-color: #00e600;
+ }
+ .ctodayb3{
+   background-color:#00ff00;
+ }

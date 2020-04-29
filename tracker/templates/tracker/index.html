@@ -1,0 +1,68 @@
+{% load static %}
+{% load humanize %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <title>Covid-19 Tracker</title>
+</head>
+<body>
+  <div class="main-block">
+    <div class="title-box">
+      <h1 class="main-title">Bangladesh Covid-19 Tracker</h1>
+      <h2 class="date">Today is {{ date }}</h2>
+    </div>
+    <div class="box1">
+      <h2 class="title">World</h2>
+      <div class="world-block">
+        <div class="wb1">
+          <h4 class="wb1t1">Confirmed</h4>
+          <h4 class="wb1t1">{{ world.confirmed|intcomma }}</h4>
+        </div>
+        <div class="wb2">
+          <h4 class="wb2t2">Death</h4>
+          <h4 class="wb2t2">{{ world.deaths|intcomma }}</h4>
+        </div>
+        <div class="wb3">
+          <h4 class="wb3t3">Recovered</h4>
+          <h4 class="wb3t3">{{ world.recovered|intcomma }}</h4>
+        </div>
+      </div>
+    </div>
+     <div class="box2">
+       <h2 class="title">Bangladesh Total</h2>
+      <div class="country-total-block">
+        <div class="ctotalb1">
+          <h4 class="ctotalb1t1">Confirmed</h4>
+          <h4 class="ctotalb1t1">{{ bd_total.confirmed|intcomma }}</h4>
+        </div>
+        <div class="ctotalb2">
+          <h4 class="ctotalb2t2">Death</h4>
+          <h4 class="ctotalb2t2">{{ bd_total.deaths|intcomma }}</h4>
+        </div>
+        <div class="ctotalb3">
+          <h4 class="ctotalb3t3">Recovered</h4>
+          <h4 class="ctotalb3t3">{{ bd_total.recovered|intcomma }}</h4>
+        </div>
+      </div>
+     </div>
+    <div class="box3">
+      <h2 class="title">Bangladesh Today</h2>
+      <div class="country-today-block">
+        <div class="ctodayb1">
+          <h4 class="ctodayb1t1">Confirmed</h4>
+          <h4 class="ctodayb1t1">{{ bd_today.confirmed|intcomma }}</h4>
+        </div>
+        <div class="ctodayb2">
+          <h4 class="ctodayb2t2">Death</h4>
+          <h4 class="ctodayb2t2">{{ bd_today.deaths|intcomma }}</h4>
+        </div>
+        <div class="ctodayb3">
+          <h4 class="ctodayb3t3">Recovered</h4>
+          <h4 class="ctodayb3t3">{{ bd_today.recovered|intcomma }}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
