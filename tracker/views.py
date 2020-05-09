@@ -57,9 +57,26 @@ def index(request):
     country_data = json.loads(response.text)
     locale.setlocale(locale.LC_ALL, '')
 
-    country_total_confirmed_previousday = country_data[0]['provinces'][0]['confirmed']
-    country_total_recovered_previousday = country_data[0]['provinces'][0]['recovered']
-    country_total_death_previousday = country_data[0]['provinces'][0]['deaths']
+    is_there_data = False
+    #check if there is data
+    if len(country_data[0]['provinces'][0]) > 1:
+        is_there_data = True
+        country_total_confirmed_previousday = country_data[0]['provinces'][0]['confirmed']
+        country_total_death_previousday = country_data[0]['provinces'][0]['deaths']
+        country_total_recovered_previousday = country_data[0]['provinces'][0]['recovered']
+
+
+        today_confirmed = (country_total_confirmed-country_total_confirmed_previousday)
+        today_deaths = (country_total_death-country_total_death_previousday)
+        today_recovered = (country_total_recovered-country_total_recovered_previousday)
+    else:
+        today_confirmed = 0
+        today_deaths = 0
+        today_recovered = 0
+
+        country_total_confirmed_previousday = country_total_confirmed
+        country_total_recovered_previousday = country_total_death
+        country_total_death_previousday = country_total_recovered
 
     #country yesterday
     url = "https://covid-19-data.p.rapidapi.com/report/country/name"
@@ -76,8 +93,19 @@ def index(request):
     locale.setlocale(locale.LC_ALL, '')
 
     country_total_confirmed_before_previousday = country_data[0]['provinces'][0]['confirmed']
-    country_total_recovered_before_previousday = country_data[0]['provinces'][0]['recovered']
     country_total_death_before_previousday = country_data[0]['provinces'][0]['deaths']
+    country_total_recovered_before_previousday = country_data[0]['provinces'][0]['recovered']
+
+
+    if is_there_data == True:
+        confirmed_yesterday = (country_total_confirmed_previousday-country_total_confirmed_before_previousday)
+        death_yesterday = (country_total_death_previousday-country_total_death_before_previousday)
+        recovered_yesterday = (country_total_recovered_previousday-country_total_recovered_before_previousday)
+    else:
+        confirmed_yesterday = country_total_confirmed - country_total_confirmed_before_previousday
+        death_yesterday = country_total_death - country_total_death_before_previousday
+        recovered_yesterday = country_total_recovered - country_total_recovered_before_previousday
+
 
     all_data ={
         'country':country,
@@ -93,14 +121,14 @@ def index(request):
             'recovered':country_total_recovered,
         },
         'bd_today':{
-            'confirmed':(country_total_confirmed-country_total_confirmed_previousday),
-            'deaths':(country_total_death-country_total_death_previousday),
-            'recovered':(country_total_recovered-country_total_recovered_previousday),
+            'confirmed':today_confirmed,
+            'deaths':today_deaths,
+            'recovered':today_recovered,
         },
         'bd_yesterday':{
-            'confirmed':(country_total_confirmed_previousday-country_total_confirmed_before_previousday),
-            'deaths':(country_total_death_previousday-country_total_death_before_previousday),
-            'recovered':(country_total_recovered_previousday-country_total_recovered_before_previousday),
+            'confirmed':confirmed_yesterday,
+            'deaths':death_yesterday,
+            'recovered':recovered_yesterday,
         },
     }
 
