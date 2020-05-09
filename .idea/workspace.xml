@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="766655ec-7ec7-4871-85a6-97b145eec329" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/covid19_tracker/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/covid19_tracker/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/static/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="766655ec-7ec7-4871-85a6-97b145eec329" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +9,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tracker/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-663">
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,7 +37,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -44,10 +49,16 @@
               <item name="covid19_tracker" type="462c0819:PsiDirectoryNode" />
               <item name="covid19_tracker" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="covid19_tracker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="covid19_tracker" type="462c0819:PsiDirectoryNode" />
+              <item name="tracker" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -105,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588154839355</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="5/10/2020 12:07AM">
+      <created>1589047634006</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1589047634006</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -135,11 +153,21 @@
     <MESSAGE value="new" />
     <MESSAGE value="edited" />
     <MESSAGE value="edited 4:07pm" />
-    <option name="LAST_COMMIT_MESSAGE" value="edited 4:07pm" />
+    <MESSAGE value="5/10/2020 12:07AM" />
+    <option name="LAST_COMMIT_MESSAGE" value="5/10/2020 12:07AM" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/covid19_tracker/wsgi.py">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracker/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-663">
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
